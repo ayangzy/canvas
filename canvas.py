@@ -20,3 +20,15 @@ chars_ascii1 = np.array(['.','x'], dtype="U1")[myCanvas]
 print(chars_ascii1)
 strings_f = chars_ascii1.view('U' + str(chars_ascii1.shape[1])).flatten()
 print( "\n".join(strings_f))
+
+
+## Draw a Vertical Line
+commandC = input('enter command: ')
+commandListC = re.split(r'\s',commandC)
+x1,y1,x2,y2 = int(commandListC[1]),int(commandListC[2]),int(commandListC[3]),int(commandListC[4])
+myCanvas[y1, x1:x2+1] = np.ones((x2-x1+1,), dtype=int)
+
+chars_ascii2 = np.array(['.','x'], dtype="U1")[myCanvas]
+print(chars_ascii2)
+strings_f = chars_ascii2.view('U' + str(chars_ascii2.shape[1])).flatten()
+print( "\n".join(strings_f))

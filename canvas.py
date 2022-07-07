@@ -34,6 +34,10 @@ strings_f = chars_ascii2.view('U' + str(chars_ascii2.shape[1])).flatten()
 print( "\n".join(strings_f))
 
 
-command = input('enter command Q to exit the programm: ')
+command = input('Enter command Q to Quit: ')
 
-exit()
+if command == "Q":
+    import sys
+    sys.exit(0)
+else:
+    print('Invalid command')

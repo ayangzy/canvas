@@ -8,3 +8,10 @@ print(commandListA)
 cmdType, canvasW,canvasH = commandListA[0],int(commandListA[1]),int(commandListA[2])
 myCanvas = np.zeros((canvasW,canvasH), dtype=int).reshape(canvasH,canvasW)
 print(myCanvas)
+
+## Create a new line from (x1,y1) to (x2,y2). Draw a Horizontal Line
+commandB = input('enter command: ')
+commandListB = re.split(r'\s',commandB)
+print(commandListB)
+x1,y1,x2,y2 = int(commandListB[1]),int(commandListB[2]),int(commandListB[3]),int(commandListB[4])
+myCanvas[y1, x1:x2+1] = np.ones((x2-x1+1,), dtype=int)

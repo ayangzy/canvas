@@ -32,3 +32,8 @@ chars_ascii2 = np.array(['.','x'], dtype="U1")[myCanvas]
 print(chars_ascii2)
 strings_f = chars_ascii2.view('U' + str(chars_ascii2.shape[1])).flatten()
 print( "\n".join(strings_f))
+
+
+command = input('enter command Q to exit the programm: ')
+
+exit()
